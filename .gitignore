@@ -1,0 +1,11 @@
+node_modules/
+# Secrets — never commit real values
+.env
+.env.*
+!.env.example
+backend/.env
+frontend/.env
+frontend/.env.local
+build/
+.DS_Store
+*.log
