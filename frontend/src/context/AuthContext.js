@@ -32,8 +32,8 @@ export const AuthProvider = ({ children }) => {
     setLoading(true);
     try {
       const { data } = await authAPI.signup({ name, email, password });
-      const userData = { ...data.data.user, token: data.data.token };
-      setUser(userData);
+      // API: { success, data: { _id, name, email, token } }
+      setUser(data.data);
       return { success: true };
     } catch (error) {
       return {
@@ -49,8 +49,7 @@ export const AuthProvider = ({ children }) => {
     setLoading(true);
     try {
       const { data } = await authAPI.login({ email, password });
-      const userData = { ...data.data.user, token: data.data.token };
-      setUser(userData);
+      setUser(data.data);
       return { success: true };
     } catch (error) {
       return {

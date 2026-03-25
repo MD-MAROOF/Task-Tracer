@@ -1,9 +1,9 @@
 const { validationResult } = require("express-validator");
 const Task = require("../models/Task");
 
-// @desc    Create a new task
+// @description    Create a new task
 // @route   POST /api/tasks
-// @access  Private
+
 const createTask = async (req, res, next) => {
   try {
     const errors = validationResult(req);

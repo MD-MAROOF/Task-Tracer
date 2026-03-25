@@ -1,6 +1,6 @@
 import React from "react";
 
-const EmptyState = ({ emoji = "📋", title, subtitle, action }) => (
+const EmptyState = ({ emoji = "!", title, subtitle, action }) => (
   <div
     style={{
       textAlign: "center",

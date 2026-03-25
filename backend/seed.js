@@ -8,12 +8,12 @@ dotenv.config();
 const seedData = async () => {
   try {
     await mongoose.connect(process.env.MONGODB_URI);
-    console.log("✅ Connected to MongoDB");
+    console.log(" Connected to MongoDB");
 
     // Clear existing data
     await User.deleteMany({});
     await Task.deleteMany({});
-    console.log("🧹 Cleared existing data");
+    console.log(" Cleared existing data");
 
     // Create demo user
     const user = await User.create({
@@ -21,7 +21,7 @@ const seedData = async () => {
       email: "demo@tasktracer.com",
       password: "password123",
     });
-    console.log("👤 Created demo user: demo@tasktracer.com / password123");
+    console.log(" Created demo user: demo@tasktracer.com / password123");
 
     // Create sample tasks
     const tasks = [
@@ -108,7 +108,7 @@ const seedData = async () => {
     ];
 
     await Task.insertMany(tasks);
-    console.log(`📋 Created ${tasks.length} sample tasks`);
+    console.log(` Created ${tasks.length} sample tasks`);
 
     console.log("\n🎉 Seed complete! You can now login with:");
     console.log("   Email:    demo@tasktracer.com");
@@ -116,7 +116,7 @@ const seedData = async () => {
 
     process.exit(0);
   } catch (error) {
-    console.error("❌ Seed failed:", error.message);
+    console.error(" Seed failed:", error.message);
     process.exit(1);
   }
 };

@@ -1,6 +1,6 @@
 import React from "react";
 
-const ConfirmDialog = ({ emoji = "⚠️", title, message, confirmLabel = "Confirm", cancelLabel = "Cancel", onConfirm, onCancel, danger = false }) => (
+const ConfirmDialog = ({ emoji = "!", title, message, confirmLabel = "Confirm", cancelLabel = "Cancel", onConfirm, onCancel, danger = false }) => (
   <div className="modal-overlay" onClick={onCancel}>
     <div
       className="modal-content"

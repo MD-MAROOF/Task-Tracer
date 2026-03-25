@@ -34,7 +34,7 @@ const errorHandler = (err, req, res, next) => {
     message = "Token has expired";
   }
 
-  console.error(`❌ Error: ${message}`);
+  console.error(` Error: ${message}`);
 
   res.status(statusCode).json({
     success: false,
